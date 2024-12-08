@@ -88,7 +88,7 @@
       </div>
     </Drawer>
 
-    <MegaMenu class="p-4 bg-surface-0 min-w-full" style="border-radius: 3rem">
+    <MegaMenu class="p-4 min-w-full" style="background-color: #ffffff">
       <template #start>
         <Button icon="pi pi-bars m-2" @click="visible = !visible" />
       </template>
@@ -127,12 +127,13 @@ const appName = appContext.config.globalProperties.appName
 const visible = ref(true)
 const layoutDrawerDefault = ref({
   mask: {
-    class: 'flex-initial',
-    style: 'position: relative; width: unset;',
+    class: 'flex-initial flex align-start justify-start flex-col',
+    style:
+      'position: relative; width: unset; background-color: #ffffff; min-height: 100vh;',
   },
 })
 
-const layoutDrawer= ref(layoutDrawerDefault.value)
+const layoutDrawer = ref(layoutDrawerDefault.value)
 
 let user = ref({
   name: 'Usuário',
@@ -146,6 +147,7 @@ const isOnMobile = ref(false)
 // Função para lidar com o redimensionamento
 const onResize = () => {
   if (window.innerWidth <= 767) {
+    visible.value = false
     isOnMobile.value = true
     layoutDrawer.value = {
       mask: {
@@ -156,8 +158,6 @@ const onResize = () => {
   } else {
     isOnMobile.value = false
     layoutDrawer.value = layoutDrawerDefault.value
-    console.log('layoutDrawer', layoutDrawer.value)
-    console.log('layoutDrawerDefault.value', layoutDrawerDefault.value)
   }
 }
 

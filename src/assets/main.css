@@ -1,10 +1,10 @@
 /*@import './base.css';*/
 
-@import "./primevue/tailwind.css";
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import './primevue/tailwind.css';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 .logo-app {
-    max-width: 50px;
+  max-width: 50px;
 }

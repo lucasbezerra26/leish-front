@@ -9,9 +9,18 @@ import PrimeVue from 'primevue/config'
 
 import Ripple from 'primevue/ripple'
 import StyleClass from 'primevue/styleclass'
-
+import Dropdown from 'primevue/dropdown'
 import App from './App.vue'
-import { MegaMenu, Avatar, Button, Drawer } from 'primevue'
+import {
+  MegaMenu,
+  Avatar,
+  Button,
+  Drawer,
+  Card,
+  Textarea,
+  Checkbox,
+  Menu,
+} from 'primevue'
 
 const app = createApp(App)
 
@@ -23,6 +32,11 @@ app.component('Drawer', Drawer)
 app.component('Button', Button)
 app.component('Avatar', Avatar)
 app.component('MegaMenu', MegaMenu)
+app.component('Card', Card)
+app.component('Textarea', Textarea)
+app.component('Checkbox', Checkbox)
+app.component('Menu', Menu)
+app.component('Dropdown', Dropdown)
 
 app.config.globalProperties.appName = 'Leish App'
 
