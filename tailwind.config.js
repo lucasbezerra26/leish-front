@@ -22,6 +22,7 @@ export default {
           light: '#ECF0F1', // Cinza claro
           dark: '#34495E', // Cinza escuro
         },
+        'background-app': '#f6f9ff',
       },
     },
   },
